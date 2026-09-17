@@ -16,7 +16,8 @@ body {
   --background: #273F5A;
   --surface: #1e3448;
   --text: #ffffff;
-  --text-muted: #a0aec0;
+  --inside-text: #000000;
+  --text-muted: #67717c;
   --accent: #5ba3c9;
 }
 
@@ -42,6 +43,7 @@ h1 {
 h2 {
   font-size: 1.25rem;
   font-weight: 600;
+  color: var(--inside-text);
 }
 
 a {
