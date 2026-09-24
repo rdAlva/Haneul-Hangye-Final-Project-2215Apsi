@@ -42,17 +42,7 @@
   gap: 8px;
 }
 
-.stat-label {
-  font-size: 0.9rem;
-  color: #1a2a3a;
-  font-weight: 500;
-}
 
-.stat-value {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #1a2a3a;
-}
 
 .dashboard-box {
   background-color: #C6DBF3;

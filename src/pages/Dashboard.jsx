@@ -8,7 +8,7 @@ import "./Dashboard.css";
 function Dashboard() {
   const [wordsLearned, setWordsLearned] = useState(0);
   const [hoursStudied, setHoursStudied] = useState(0);
-  const [wordsLearnedThisWeek, setWordsLearnedThisWeek] = useState(0);
+  const [totalSessions, setTotalSessions] = useState(0);
   const [recentSessions, setRecentSessions] = useState([]);
   const [user, setUser] = useState(null);
 
@@ -82,8 +82,8 @@ function Dashboard() {
             <InfoCard label="Words Learned" value={wordsLearned} />
             <InfoCard label="Hours Studied" value={hoursStudied} />
             <InfoCard
-              label="Words Learned This Week"
-              value={wordsLearnedThisWeek}
+              label="Total Sessions"
+              value={totalSessions}
             />
           </div>
           <div className="recent-sessions">
