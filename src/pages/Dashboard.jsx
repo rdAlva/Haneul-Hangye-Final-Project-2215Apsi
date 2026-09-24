@@ -43,15 +43,6 @@ function Dashboard() {
       const totalMinutes =
         sessions?.reduce((sum, s) => sum + s.duration_minutes, 0) ?? 0;
 
-      const startOfWeek = new Date();
-      startOfWeek.setDate(startOfWeek.getDate() - startOfWeek.getDay());
-
-      const { count: weekCount } = await supabase
-        .from("vocabulary_words")
-        .select("*", { count: "exact", head: true })
-        .eq("user_id", currentUser.id)
-        .gte("created_at", startOfWeek.toISOString());
-
       const { data: recentData } = await supabase
         .from("study_sessions")
         .select("activity_type, duration_minutes, session_date, notes")
@@ -61,7 +52,7 @@ function Dashboard() {
 
       setWordsLearned(wordCount ?? 0);
       setHoursStudied(Math.floor(totalMinutes / 60));
-      setWordsLearnedThisWeek(weekCount ?? 0);
+      setTotalSessions(sessions?.length ?? 0);
       setRecentSessions(recentData ?? []);
     };
 
