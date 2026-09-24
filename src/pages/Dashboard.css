@@ -21,7 +21,7 @@
 }
 
 .korean-praise {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--text);
 }
@@ -41,8 +41,6 @@
   flex-direction: column;
   gap: 8px;
 }
-
-
 
 .dashboard-box {
   background-color: #C6DBF3;
