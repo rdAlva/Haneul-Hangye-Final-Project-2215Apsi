@@ -1,0 +1,21 @@
+.sessions {
+  padding: 30px 40px;
+}
+
+.sessions h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.sessions-box {
+  background-color: #C6DBF3;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.session-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
