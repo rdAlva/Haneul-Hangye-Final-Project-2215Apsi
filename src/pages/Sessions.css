@@ -19,3 +19,32 @@
   flex-direction: column;
   gap: 12px;
 }
+
+/* I made this */
+.sessions-header{ 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.sessions-header-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+/* I made this but asked ai for help in aligning */
+.sessions-header-right .log-sessions {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0px;
+  line-height: 1;
+}
+.plus-sign {
+  display:block;
+  width: 40px;
+  height: auto;
+}

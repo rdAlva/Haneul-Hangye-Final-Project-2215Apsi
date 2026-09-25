@@ -3,6 +3,7 @@ import { supabase } from "../db/supabase";
 import Navbar from "../components/Navbar";
 import SessionItems from "../components/SessionItems";
 import "./Sessions.css";
+import plus from "../assets/plus.png";
 
 function Sessions() {
   const [recentSessions, setRecentSessions] = useState([]);
@@ -46,8 +47,13 @@ function Sessions() {
     <div>
       <Navbar />
       <main className="sessions">
-        <h1>Good day, Learner</h1>
-
+        <div className="sessions-header">
+          <h1>Good day, Learner</h1>
+          <div className="sessions-header-right">
+            <img className="plus-sign" src={plus} alt="Plus sign" />
+            <h1 className="log-sessions">Log sessions</h1>
+          </div>
+        </div>
         <div className="sessions-box">
           <div className="recent-sessions">
             <h2>Recent Sessions</h2>
