@@ -2,11 +2,9 @@ import { useEffect, useState } from "react";
 import { supabase } from "../db/supabase";
 import Navbar from "../components/Navbar";
 import SessionItems from "../components/SessionItems";
-import "./Dashboard.css";
+import "./Sessions.css";
 
 function Sessions() {
-  const [hoursStudied, setHoursStudied] = useState(0);
-  const [totalSessions, setTotalSessions] = useState(0);
   const [recentSessions, setRecentSessions] = useState([]);
   const [user, setUser] = useState(null);
 
@@ -38,8 +36,6 @@ function Sessions() {
         .order("session_date", { ascending: false })
         .limit(3);
 
-      setHoursStudied(Math.floor(totalMinutes / 60));
-      setTotalSessions(sessions?.length ?? 0);
       setRecentSessions(recentData ?? []);
     };
 
